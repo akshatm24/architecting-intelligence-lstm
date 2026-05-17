@@ -1,13 +1,16 @@
 # Architecting Intelligence: Character-Level LSTM
 
-This repository packages my submission for the MatSoc IIT Kanpur winter project **Architecting Intelligence**, focused on modern AI foundations, neural networks, sequence modeling, and text generation.
+Public project portfolio for my MatSoc IIT Kanpur winter project **Architecting Intelligence**.
 
-## What This Project Shows
+**Period:** December 2025 - January 2026  
+**Focus:** neural-network fundamentals, NLP, sequence modeling, and generative language modeling
 
-- Built a character-level language model in **PyTorch** using an LSTM architecture.
-- Trained on the **WikiText-2 raw** dataset with roughly **10.9M training characters** and a **1,014-character vocabulary**.
-- Implemented the full modeling loop: data encoding, batching, model definition, training, validation, loss tracking, and text generation.
-- Used temperature sampling to compare conservative and creative generation behavior.
+## Recruiter Snapshot
+
+- Implemented a complete **character-level LSTM language model** in PyTorch.
+- Worked with **WikiText-2 raw**: roughly **10.9M training characters** and a **1,014-character vocabulary**.
+- Built the end-to-end workflow: character encoding, batch sampling, model class, hidden-state handling, training loop, validation, loss visualization, and text generation.
+- Tested **temperature sampling** to compare safe/repetitive generation against more creative but noisier outputs.
 
 ## Key Results
 
@@ -23,6 +26,15 @@ This repository packages my submission for the MatSoc IIT Kanpur winter project 
 | Training steps | 300 |
 | Validation loss | Improved from **3.17** to **2.14** |
 
+## Resume Claim Traceability
+
+| Resume claim | Where to verify |
+| --- | --- |
+| PyTorch character-level LSTM | `notebooks/char_lstm_wikitext.ipynb`, `CharLSTM` class |
+| WikiText-2, 10.9M characters, 1,014 vocabulary | Data loading and preprocessing cells |
+| Validation loss 3.17 to 2.14 | Training output cells |
+| Temperature-based generation | Sampling/probing cells |
+
 ## Repository Structure
 
 ```text
@@ -32,18 +44,24 @@ notebooks/
 docs/
   assignment_prompt.pdf           # Original assignment prompt
   assignment_submission.pdf       # Submitted report/export
+  project_summary.md              # Short reviewer-facing explanation
+
+requirements.txt                  # Python environment outline
 ```
 
 ## How To Review
 
-Open `notebooks/char_lstm_wikitext.ipynb` and scan:
+For a quick review, open `docs/project_summary.md` first. For technical depth, open `notebooks/char_lstm_wikitext.ipynb` and scan:
 
 1. Dataset loading and character vocabulary construction.
 2. `CharLSTM` model definition.
 3. Training loop with validation loss checkpoints.
 4. Temperature-based generation examples.
 
+## Notes
+
+This is a learning and implementation project, not a production LLM. The value is in showing that I can implement the modeling loop, reason about sequence behavior, and document model limitations clearly.
+
 ## Tech Stack
 
 Python, PyTorch, Hugging Face Datasets, NumPy, Matplotlib
-
