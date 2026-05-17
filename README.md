@@ -38,6 +38,12 @@ Public project portfolio for my MatSoc IIT Kanpur winter project **Architecting 
 ## Repository Structure
 
 ```text
+src/
+  char_lstm.py                    # Reusable PyTorch model, training loop, and generator
+
+scripts/
+  smoke_test.py                   # Fast local validation on a bundled mini corpus
+
 notebooks/
   char_lstm_wikitext.ipynb        # Complete PyTorch LSTM implementation
 
@@ -45,13 +51,25 @@ docs/
   assignment_prompt.pdf           # Original assignment prompt
   assignment_submission.pdf       # Submitted report/export
   project_summary.md              # Short reviewer-facing explanation
+  validation.md                   # Local checks run before publishing
 
 requirements.txt                  # Python environment outline
 ```
 
+## Run Locally
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 -m compileall src scripts
+python3 scripts/smoke_test.py
+python3 -m src.char_lstm
+```
+
+The script uses a small bundled corpus so reviewers can verify the modeling code quickly without downloading WikiText-2. The notebook contains the full project run on WikiText-2.
+
 ## How To Review
 
-For a quick review, open `docs/project_summary.md` first. For technical depth, open `notebooks/char_lstm_wikitext.ipynb` and scan:
+For a quick review, open `docs/project_summary.md` first, then `docs/validation.md`. For technical depth, open `notebooks/char_lstm_wikitext.ipynb` and scan:
 
 1. Dataset loading and character vocabulary construction.
 2. `CharLSTM` model definition.
