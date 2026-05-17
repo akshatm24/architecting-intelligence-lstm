@@ -30,7 +30,7 @@ Public project portfolio for my MatSoc IIT Kanpur winter project **Architecting 
 
 | Resume claim | Where to verify |
 | --- | --- |
-| PyTorch character-level LSTM | `notebooks/char_lstm_wikitext.ipynb`, `CharLSTM` class |
+| PyTorch character-level LSTM | `src/char_lstm.py`, `notebooks/char_lstm_wikitext.ipynb` |
 | WikiText-2, 10.9M characters, 1,014 vocabulary | Data loading and preprocessing cells |
 | Validation loss 3.17 to 2.14 | Training output cells |
 | Temperature-based generation | Sampling/probing cells |
